@@ -45,6 +45,9 @@ import json
 import shutil
 from tqdm import tqdm
 
+import torch.multiprocessing
+torch.multiprocessing.set_sharing_strategy('file_system')
+
 # Access the registered custom COCO dataset
 dataset_name = "coastal_dataset"
 
